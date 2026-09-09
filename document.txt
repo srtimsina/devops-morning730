@@ -1,3 +1,7 @@
-This is a demo document
+DevOps class at TA is going well. The class starts at 7:30 AM
+sudo apt update
+mkdir /data
+touch /data/myfile.txt
 Today is Wednesday
 Git is a important tool
+
