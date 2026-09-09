@@ -1,3 +1,14 @@
 This is a demo document
 Today is Wednesday
+We are going to learn merge conflicts
 Git is a important tool
+
+few basic commands in git
+to create new branch,
+git branch mynewfeature
+
+to see the contents of the commit
+git show {commit_id}
+
+git diff
+
