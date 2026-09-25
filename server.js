@@ -1,14 +1,23 @@
-const http = require('http');
+const express = require('express');
+const morgan = require('morgan');
 
-const hostname = '0.0.0.0';
+const app = express();
 const port = process.env.PORT || 3000;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello from Node.js!\n');
+app.use(morgan('tiny'));
+
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Hello from Node.js with Express and Morgan!',
+    app: 'devops-morning730-node-app',
+    timestamp: new Date().toISOString()
+  });
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
+
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running at http://0.0.0.0:${port}`);
 });

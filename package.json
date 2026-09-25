@@ -1,13 +1,17 @@
 {
   "name": "devops-morning730-node-app",
   "version": "1.0.0",
-  "description": "A minimal Node.js app for practice",
+  "description": "A Node.js app with real runtime modules for Docker practice",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "morgan": "^1.10.0"
   },
   "license": "MIT"
 }
